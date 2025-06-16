@@ -1,27 +1,62 @@
-# 🏎️ Monaco Grand Prix 2025 Prediction
+# 🏎️ Monaco GP 2025 Predictor - Machine Learning Model
 
-Machine learning model to predict the 2025 Monaco Grand Prix results using FastF1 data, sector times, team performance, and track-specific features
-##  Project Highlights
+Welcome to the Monaco Grand Prix 2025 prediction repository! This project uses FastF1 API data and Gradient Boosting to predict race outcomes with **0.103s MAE accuracy**.
 
-- **Accurate Predictions:** Achieved **0.103s MAE** on lap time forecasts
-- **Monaco-Specific Model:** Incorporates:
-  - High safety car probability (65%)
-  - Extended pit loss time (20.5s)
-  - Sector 3 performance weighting (25%)
-- **Key Features:** Qualifying times (40% weight), team performance, weather adjustments
+## Project Overview
+This repository contains a machine learning pipeline that:
+- Predicts Monaco GP results using **track-specific features**
+- Achieves **0.103s MAE** (race-winning margins are often <0.5s)
+- Optimized for Monaco's unique characteristics:
+  - 65% safety car probability
+  - 20.5s pit loss time
+  - Sector 3 performance weighted 25%
 
-## 🛠️ Technical Implementation
+## 📊 Data Sources
+- **FastF1 API**: Lap times, telemetry, weather
+- **2024 Monaco GP**: Training data
+- **Simulated 2025 Qualifying**: Prediction input
 
-### Core Technologies
-- **Python** with `FastF1` v3.5.3 for data collection
-- **Scikit-learn**'s `GradientBoostingRegressor` (best performing model)
-- **Pandas/NumPy** for data processing
+## 🏁 How It Works
+1. **Data Collection**:  
+   ```python
+   import fastf1
+   session = fastf1.get_session(2024, 'Monaco', 'R')
+   session.load()
+   ```
+2. **Feature Engineering**:  
+   - Qualifying times (40% weight)
+   - Sector 3 performance (25%)
+   - Team constructor points
+   - Monaco-specific adjustments
 
-### Model Specifications
-```python
-model = GradientBoostingRegressor(
-    n_estimators=200,
-    learning_rate=0.05,
-    max_depth=5,
-    random_state=42
-)
+3. **Model Training**:  
+   ```python
+   from sklearn.ensemble import GradientBoostingRegressor
+   model = GradientBoostingRegressor(n_estimators=200, learning_rate=0.05, max_depth=5)
+   ```
+
+4. **Prediction**:  
+   ```bash
+   python predict_monaco.py
+   ```
+   **Output**:  
+   🏁 Predicted 2025 Monaco GP Winner  
+   Driver: Esteban Ocon, Predicted Time: 78.037s  
+   MAE: 0.103s
+
+## 🔧 Dependencies
+```bash
+pip install fastf1 pandas scikit-learn matplotlib
+```
+
+##  Model Performance
+- **MAE**: 0.103 seconds  
+- **Key Influencers**:
+  1. Qualifying Time (40%)
+  2. Sector 3 Performance (25%)
+  3. Team Points (15%)
+
+## 📌 Future Improvements
+- [ ] Real-time weather integration
+- [ ] Tire degradation modeling
+- [ ] Expand to other street circuits (Singapore, Baku)
