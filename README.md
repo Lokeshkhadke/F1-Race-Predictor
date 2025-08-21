@@ -56,16 +56,6 @@ The model successfully predicted **Esteban Ocon** (Alpine) as the winner of the 
     2.  Sector 3 Performance
     3.  Team Constructor Points
 
-## 📈 Project Structure
-
-```
-monaco-gp-predictor/
-├── Monaco_GP_Prediction.ipynb  # Main Jupyter notebook
-├── README.md                   # This file
-├── requirements.txt            # Project dependencies
-└── assets/                     # Contains screenshots or charts
-    └── feature_importance.png
-```
 
 ## 🔮 Future Enhancements
 
@@ -75,7 +65,7 @@ monaco-gp-predictor/
 
 ## 👨‍💻 Author
 
-**Your Name**
+Lokesh K
 - LinkedIn: https://www.linkedin.com/in/lokeshkhadke
 - Email: lkhadke32@outlook.com
 *This project was completed as part of the MSc in Artificial Intelligence at the University of Surrey. Open to new opportunities in Data Science and Machine Learning.*
