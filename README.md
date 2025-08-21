@@ -1,9 +1,8 @@
 # 🏎️ Monaco GP 2025 Predictor - Machine Learning Model
 
-A sophisticated yet intuitive machine learning model that predicts Formula 1 race outcomes for the challenging Monaco circuit. Developed from scratch using fundamental Python libraries, this project demonstrates a strong grasp of the full ML pipeline and was awarded **85/90** in a Master's-level coursework.
+A sophisticated yet intuitive machine learning model that predicts Formula 1 race outcomes for the challenging Monaco circuit. Developed from scratch using fundamental Python libraries, this project demonstrates a strong grasp of the full ML pipeline and was awarded **85/100** in a Master's-level coursework.
 
-> **Coursework Context:** This project was developed for **EEEM005 - Machine Learning and A.I.** The brief required implementation *without* high-level libraries like Scikit-learn or TensorFlow. The final grade of **85%** praised the model's accuracy and pipeline, with feedback noting an opportunity to improve the clarity of communication for a broader audience—a lesson directly applied to this README.
-
+> **Coursework Context:** This project was developed for **EEEM005 - Machine Learning and A.I.** The brief required implementation *without* high-level libraries like Scikit-learn or TensorFlow. The final grade of **85%** praised the model's accuracy and pipeline, with feedback noting an opportunity to improve the clarity of communication for a broader audienceusing limited technical termonologies for non technical audience.
 ## 📊 Project Highlights
 
 - **High Accuracy:** Achieved a Mean Absolute Error (MAE) of **0.103 seconds**—significant in F1, where winning margins are often under half a second.
